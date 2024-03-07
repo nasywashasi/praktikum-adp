@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+float a,b,hasil,r,v,p,l,t,Luas;
+string nama,noBP;
+const float phi = 3.14;
+
+int main(){
+    nama = " shasi ";
+    noBP = " 2310433015 ";
+
+    cout << " Halo, " + nama;
+    cout << " dengan BP " + noBP << endl;
+    cout << "=================================================="<< endl;
+
+    cout << " Kode Program Soal Nomor 1 " << endl;
+    cout << " Nilai a = "; cin >> a;
+    cout << " Nilai b = "; cin >> b;
+    float hasil = a*b;
+    cout << " Hasil perkalian dari a dan b adalah " << hasil << endl;
+    cout << "=================================================="<< endl;
+
+    cout << " Kode Program Soal Nomor 2 " << endl;
+    cout << " Mari menghitung volume bola " << endl;
+    cout << " Jari - jari bola = "; cin >> r;
+    float v = (4/3)*phi*r*r*r;
+    cout << " Nilai Volume Bola tersebut adalah " << v << endl;
+    cout << "==================================================" << endl;
+
+    cout << " Kode Program Soal Nomor 3 " << endl;
+    cout << " Menghitung nilai luas permukaan balok " << endl;
+    cout << " Panjang balok = "; cin >> p;
+    cout << " Lebar balok   = "; cin >> l;
+    cout << " Tinggi balok  = "; cin >> t;
+    float Luas = 2*((p*l)+(p*t)+(l*t));
+    cout << " Nilai Luas Permukaan Balok adalah " << Luas << endl;
+
+    cout << "==================================================" << endl;
+    cout << " Sekian dan Terimakasih " << endl;
+    return 0;
+}
