@@ -1,0 +1,58 @@
+print("Welcome To Saki Resto")
+print("----------------------------")
+print("Menu Makanan Saki Resto")
+print("1. Kwetiau - Rp12000")
+print("2. Mie Ayam - Rp18000")
+print("3. Pangsit Goreng - Rp20000")
+makanan = float(input("Pesanan Anda = "))
+porsimakanan = float(input("Jumlah pesanan Anda = "))
+totalmakanan = porsimakanan*makanan
+if (makanan == 1):
+    print("Total pesanan = Rp",(porsimakanan*12000))
+elif (makanan == 2):
+    print("Total pesanan = Rp",(porsimakanan*18000))
+elif (makanan == 3):
+    print("Total pesanan = Rp",(porsimakanan*20000))
+else : print("Menu Tidak Valid")
+print("----------------------------")
+print("Menu Minuman Saki Resto")
+print("1. Milo dingin - Rp8000")
+print("2. Es campur - Rp12000")
+print("3. Air mineral - Rp4000")
+minuman = float(input("Pesanan Anda = "))
+porsiminuman = float(input("Jumlah pesanan Anda = "))
+totalminuman = porsiminuman*minuman
+if (minuman == 1):
+    print("Total pesanan = Rp",(porsiminuman*8000))
+elif (minuman == 2):
+    print("Total pesanan = Rp",(porsiminuman*12000))
+elif (minuman == 3):
+    print("Total pesanan = Rp",(porsiminuman*4000))
+else : print("Menu Tidak Valid")
+print("------------------------------")
+nama = input("Nama pemesan = ")
+totalpesanan = porsimakanan+porsiminuman
+totalharga = totalmakanan+totalminuman
+print("Atas nama",nama)
+print("Total pesanan Anda = ",(porsimakanan+porsiminuman))
+if ((makanan == 1)&(minuman == 1)):
+    print("Total harga = Rp",((porsimakanan*12000)+(porsiminuman*8000)))
+elif ((makanan == 1)&(minuman == 2)):
+    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*12000)))
+elif ((makanan == 1)&(minuman == 3)):
+    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*4000)))
+elif ((makanan == 2)&(minuman == 1)):
+    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*8000)))
+elif ((makanan == 2)&(minuman == 2)):
+    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*12000)))
+elif ((makanan == 2)&(minuman == 3)):
+    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*4000)))
+elif ((makanan == 3)&(minuman == 1)):
+    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*8000)))
+elif ((makanan == 3)&(minuman == 2)):
+    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*12000)))
+elif ((makanan == 3)&(minuman == 3)):
+    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*4000)))
+else : print("Menu Tidak Valid")
+print("Selamat Menikmati")
+print("Anda kenyang, kami pun senang")
