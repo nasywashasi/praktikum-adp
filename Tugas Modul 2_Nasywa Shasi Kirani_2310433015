@@ -4,55 +4,50 @@ print("Menu Makanan Saki Resto")
 print("1. Kwetiau - Rp12000")
 print("2. Mie Ayam - Rp18000")
 print("3. Pangsit Goreng - Rp20000")
-makanan = float(input("Pesanan Anda = "))
-porsimakanan = float(input("Jumlah pesanan Anda = "))
-totalmakanan = porsimakanan*makanan
+
+makanan = int(input("Pesanan Anda = "))
+porsimakanan = int(input("Jumlah pesanan Anda = "))
+jumlahpesanananda = 0
+totalmakanan = 0
+
 if (makanan == 1):
-    print("Total pesanan = Rp",(porsimakanan*12000))
+    totalmakanan = porsimakanan*12000
+    print("Total pesanan = Rp", totalmakanan)
 elif (makanan == 2):
-    print("Total pesanan = Rp",(porsimakanan*18000))
+    totalmakanan = porsimakanan*18000
+    print("Total pesanan = Rp", totalmakanan)
 elif (makanan == 3):
-    print("Total pesanan = Rp",(porsimakanan*20000))
+    totalmakanan = porsimakanan*20000
+    print("Total pesanan = Rp", totalmakanan)
 else : print("Menu Tidak Valid")
+
 print("----------------------------")
 print("Menu Minuman Saki Resto")
 print("1. Milo dingin - Rp8000")
 print("2. Es campur - Rp12000")
 print("3. Air mineral - Rp4000")
-minuman = float(input("Pesanan Anda = "))
-porsiminuman = float(input("Jumlah pesanan Anda = "))
-totalminuman = porsiminuman*minuman
+minuman = int(input("Pesanan Anda = "))
+porsiminuman = int(input("Jumlah pesanan Anda = "))
+totalminuman = 0
+
 if (minuman == 1):
-    print("Total pesanan = Rp",(porsiminuman*8000))
+    totalminuman = porsiminuman*8000
+    print("Total pesanan = Rp", totalminuman)
 elif (minuman == 2):
-    print("Total pesanan = Rp",(porsiminuman*12000))
+    totalminuman = porsiminuman*12000
+    print("Total pesanan = Rp", totalminuman)
 elif (minuman == 3):
-    print("Total pesanan = Rp",(porsiminuman*4000))
+    totalminuman = porsiminuman*4000
+    print("Total pesanan = Rp", totalminuman)
 else : print("Menu Tidak Valid")
+
 print("------------------------------")
 nama = input("Nama pemesan = ")
-totalpesanan = porsimakanan+porsiminuman
-totalharga = totalmakanan+totalminuman
+totalpesanan = porsimakanan + porsiminuman
+totalharga = totalmakanan + totalminuman
+
 print("Atas nama",nama)
-print("Total pesanan Anda = ",(porsimakanan+porsiminuman))
-if ((makanan == 1)&(minuman == 1)):
-    print("Total harga = Rp",((porsimakanan*12000)+(porsiminuman*8000)))
-elif ((makanan == 1)&(minuman == 2)):
-    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*12000)))
-elif ((makanan == 1)&(minuman == 3)):
-    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*4000)))
-elif ((makanan == 2)&(minuman == 1)):
-    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*8000)))
-elif ((makanan == 2)&(minuman == 2)):
-    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*12000)))
-elif ((makanan == 2)&(minuman == 3)):
-    print("Total harga = Rp",((porsimakanan*18000)+(porsiminuman*4000)))
-elif ((makanan == 3)&(minuman == 1)):
-    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*8000)))
-elif ((makanan == 3)&(minuman == 2)):
-    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*12000)))
-elif ((makanan == 3)&(minuman == 3)):
-    print("Total harga = Rp",((porsimakanan*20000)+(porsiminuman*4000)))
-else : print("Menu Tidak Valid")
+print("Total pesanan Anda = ", totalpesanan)
+print("Total harga = Rp", totalharga)
 print("Selamat Menikmati")
 print("Anda kenyang, kami pun senang")
