@@ -1,0 +1,38 @@
+nama = input("Masukkan nama Anda: ")
+print("Halo,", nama, "!")
+print("Mari menghitung penjumlahan dan perkalian")
+print("------------------------------------------")
+
+while True:
+    n = input("Masukkan nilai n (1-10): ")
+    if int(n) < 1 or int(n) > 10:
+        print("Input tidak valid. Masukkan angka antara 1 sampai 10")
+        continue
+
+    n = int(n)
+
+    print("\nMENU")
+    print("1. Tabel perkalian n x n")
+    print("2. Tabel penjumlahan n x n")
+    print("3. Keluar")
+
+    pilihan = input("Pilih menu: ")
+    if pilihan == '1':
+        print("Tabel Perkalian {n} x {n}")
+        for i in range(1, n + 1):
+            for j in range(1, n + 1):
+                print(i * j, end="\t")
+            print()
+    elif pilihan == '2':
+        print("Tabel Penjumlahan {n} x {n}")
+        for i in range(0, n + 1):
+            for j in range(0, n + 1):
+                if (i == 0 and j == 0):
+                    print("+")
+                print(i + j, end="\t")
+            print()
+    elif pilihan == '3':
+        print("Terima kasih!")
+        break
+    else:
+        print("Input tidak valid. Masukkan angka 1, 2, atau 3.\n")
