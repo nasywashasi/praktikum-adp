@@ -1,0 +1,58 @@
+// Kode program soal nomor 1
+nama = input("Masukkan nama Anda : ")
+print("Halo,",nama,"!")
+print("Menentukan bilangan sempurna dan menentukan bilangan ganjil atau genap ")
+print("---------------------------------------------------------------------")
+bilangan = int(input("Masukkan bilangan bulat positif: "))
+
+if bilangan <= 0:
+    print("Masukkan bilangan bulat positif!")
+else:
+  
+    if bilangan % 2 == 0:
+        print(bilangan,"adalah bilangan genap")
+    else:
+        print(bilangan,"adalah bilangan ganjil")
+
+    faktor = 1
+    total = 0
+    while faktor < bilangan:
+        if bilangan % faktor == 0:
+            total += faktor
+        faktor += 1
+
+    if total == bilangan:
+        print(bilangan,"adalah bilangan sempurna")
+    else:
+        print(bilangan,"bukan bilangan sempurna")
+
+print("-------------------------------------------------")
+print("Terimakasih!")
+
+
+
+// Kode program soal nomor 2
+#include <iostream>
+using namespace std;
+
+int i,j,t;
+
+int main(){
+    cout << " Halo, Nasywa Shasi Kirani!"<< endl;
+    cout << " Mencetak pola segitiga dengan angka" << endl;
+    cout << " ----------------------------------------- " << endl;
+
+    cout << " Masukkan tinggi : "; cin >> t;
+    cout << endl;
+
+    if (t <= 0){cout << " Tinggi segitiga harus merupakan bilangan bulat positif! " << endl;
+        } else {for (i=1; i<=t; i++){
+        for (j=1; j<=i; j++){
+            cout << j << " ";
+            }
+        cout << endl;
+        }
+        }
+        cout << endl;
+        cout << " Terimakasih!" << endl;
+}
