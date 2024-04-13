@@ -1,0 +1,36 @@
+nama = input("Masukkan nama Anda : ")
+print("Halo,",nama,"!")
+print("Mengubah teks enkripsi")
+print("----------------------")
+
+while True:
+    k = int(input("Masukkan nilai k (1 hingga 26): "))
+    if 1 <= k <= 26:
+        break
+    else:
+        print("Masukkan nilai k di antara 1 hingga 26.")
+
+
+teks_awal = input("Masukkan teks yang akan dienkripsi: ")
+
+alfabet = 'abcdefghijklmnopqrstuvwxyz'  
+teks_baru= ''
+
+for char in teks_awal:
+    if char.isalpha():  
+        kapital = char.isupper()  
+        char = char.lower() 
+        
+        indeks = alfabet.index(char) 
+        indeks_baru = (indeks + k) % 26
+        char_baru = alfabet[indeks_baru]
+
+    if kapital:
+        char_baru = char_baru.upper()  
+    teks_baru += char_baru
+else :
+    teks_baru += char
+
+print("Teks terenkripsi:", teks_baru)
+
+print("Terimakasih!")
