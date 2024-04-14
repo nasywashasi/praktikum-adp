@@ -25,12 +25,12 @@ for char in teks_awal:
         indeks_baru = (indeks + k) % 26
         char_baru = alfabet[indeks_baru]
 
-    if kapital:
-        char_baru = char_baru.upper()  
-    teks_baru += char_baru
-else :
-    teks_baru += char
+        if kapital:
+            char_baru = char_baru.upper()  
+        teks_baru += char_baru
+    else :
+        teks_baru += char
 
-print("Teks terenkripsi:", teks_baru)
+print("Teks yang sudah dienkripsi:", teks_baru)
 
 print("Terimakasih!")
