@@ -1,0 +1,38 @@
+print(" ------------------------------------------------------------------ ")
+print(" Selamat Datang di Bandara Merdeka ")
+print(" Berikut jadwal penerbangan pesawat tujuan Padang - Surabaya ")
+print(' __________________________________________________________________________')
+print('|       Pesawat       |  Citilink |   Garuda   |  Batik Air  |  Sriwijaya  |')
+print('|_____________________|___________|____________|_____________|_____________|')
+print('|      Kota Asal      |  Padang   |   Padang   |    Padang   |   Padang    |')
+print('|_____________________|___________|____________|_____________|_____________|')
+print('|    Kota Tujuan      | Surabaya  |  Surabaya  |   Surabaya  |  Surabaya   |')
+print('|_____________________|___________|____________|_____________|_____________|')
+print('| Waktu Keberangkatan | 08.00 WIB |  06.10 WIB |  09.00 WIB  |  07.20 WIB  |')
+print('|_____________________|___________|____________|_____________|_____________|')
+print('|  Waktu Kedatangan   | 13.55 WIB |  11.00 WIB |  15.35 WIB  |  12.50 WIB  |')
+print('|_____________________|___________|____________|_____________|_____________|')
+
+waktu_penerbangan = [ 
+    [ 13.55, 11.00, 15.35, 12.50 ],
+    [ 8.00, 6.10, 9.00, 7.20 ]
+]
+pesawat = [ "Citilink", "Garuda", "Batik Air", "Sriwijaya"]
+
+tercepat = []
+for i in range(len(pesawat)):
+    tercepat.append(waktu_penerbangan[0][i] - waktu_penerbangan[1][i])
+
+maks = tercepat[0]
+indeks = 0
+for i in range(len(tercepat)):
+    if tercepat[i] < maks:
+        maks = tercepat[i]
+        indeks = i
+
+print("\n Apabila Anda menginginkan pesawat dengan rute atau waktu tercepat,")
+print(f" Kami menyarankan Anda untuk memilih pesawat {pesawat[indeks]}")
+
+print("\n Terimakasih dan Selamat Menikmati Perjalanan Anda")
+print(" Dari Kami, Pihak Bandara Merdeka")
+print(" ------------------------------------------------------------------ ")
