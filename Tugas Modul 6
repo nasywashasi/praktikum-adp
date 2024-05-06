@@ -1,23 +1,25 @@
 print(" ------------------------------------------------------------------ ")
 print(" Selamat Datang di Bandara Merdeka ")
 print(" Berikut jadwal penerbangan pesawat tujuan Padang - Surabaya ")
-print(' __________________________________________________________________________')
-print('|       Pesawat       |  Citilink |   Garuda   |  Batik Air  |  Sriwijaya  |')
-print('|_____________________|___________|____________|_____________|_____________|')
-print('|      Kota Asal      |  Padang   |   Padang   |    Padang   |   Padang    |')
-print('|_____________________|___________|____________|_____________|_____________|')
-print('|    Kota Tujuan      | Surabaya  |  Surabaya  |   Surabaya  |  Surabaya   |')
-print('|_____________________|___________|____________|_____________|_____________|')
-print('| Waktu Keberangkatan | 08.00 WIB |  06.10 WIB |  09.00 WIB  |  07.20 WIB  |')
-print('|_____________________|___________|____________|_____________|_____________|')
-print('|  Waktu Kedatangan   | 13.55 WIB |  11.00 WIB |  15.35 WIB  |  12.50 WIB  |')
-print('|_____________________|___________|____________|_____________|_____________|')
+print(' _______________________________________________________________________________________________')
+print('|       Pesawat       |  Kota Asal |   Kota Tujuan  |  Waktu Keberangkatan  |  Waktu Kedatangan |')
+print('|_____________________|____________|________________|_______________________|___________________|')
+print('|       Citilink      |   Padang   |    Surabaya    |       08.00 WIB       |     13.55 WIB     |')
+print('|_____________________|____________|________________|_______________________|___________________|')
+print('|        Garuda       |   Padang   |    Surabaya    |       06.10 WIB       |      11.00 WIB    |')
+print('|_____________________|____________|________________|_______________________|___________________|')
+print('|      Batik Air      |   Padang   |    Surabaya    |       09.00 WIB       |      15.35 WIB    |')
+print('|_____________________|____________|________________|_______________________|___________________|')
+print('|      Sriwijaya      |   Padang   |    Surabaya    |       07.20 WIB       |      12.50 WIB    |')
+print('|_____________________|____________|________________|_______________________|___________________|')
+print('|      Super Jet      |   Padang   |    Surabaya    |       10.25 WIB       |      19.05 WIB    |')
+print('|_____________________|____________|________________|_______________________|___________________|')
 
 waktu_penerbangan = [ 
-    [ 13.55, 11.00, 15.35, 12.50 ],
-    [ 8.00, 6.10, 9.00, 7.20 ]
+    [ 13.55, 11.00, 15.35, 12.50, 19.05 ],
+    [ 8.00, 6.10, 9.00, 7.20, 10.25 ]
 ]
-pesawat = [ "Citilink", "Garuda", "Batik Air", "Sriwijaya"]
+pesawat = [ "Citilink", "Garuda", "Batik Air", "Sriwijaya", "Super Jet"]
 
 tercepat = []
 for i in range(len(pesawat)):
