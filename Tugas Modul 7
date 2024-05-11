@@ -1,0 +1,73 @@
+def jadwal_kegiatan(kegiatan_harian):
+    print(" --------------------------------------------------------- ")
+    print(" Jadwal Kegiatan Harian Anda\n")
+
+    for agenda in kegiatan_harian:
+        daftar_kegiatan, waktu2, waktu_mulai, waktu_selesai, rincian = agenda
+        print(f" Kegiatan           = {daftar_kegiatan}")
+        print(f" Waktu              = {waktu2}")
+        print(f" Waktu Mulai        = {waktu_mulai}")
+        print(f" Waktu Selesai      = {waktu_selesai}")
+        print(f" Deskripsi Kegiatan = {rincian}")
+        print()   
+
+kegiatan_harian = [
+    ["Memberi makan kucing", "Pagi", "5.00 WIB", "6.30 WIB", "Memberi makan dan membersihkan kandang"],
+    ["Mencuci baju", "Pagi", "7.00 WIB", "7.30 WIB", "Mencuci dan menjemur pakaian"],
+    ["Belanja", "Siang", "13.00 WIB", "14.30 WIB", "Membeli beberapa barang untuk kebutuhan di kos"],
+    ["Nyetrika", "Sore", "17.00 WIB", "17.30 WIB", "Menyetrika beberapa pakaian"],
+    ["Nugas", "Malam", "18.00 WIB", "20.00 WIB", "Mengerjakan tugas yang diberi dosen"],
+    ["Jurnal", "Malam", "20.00 WIB", "20.30 WIB", "Membuat catatan mengenai segala hal yang terjadi hari ini"],
+    ["Nonton", "Malam", "21.00 WIB", "22.00 WIB", "Menonton film atau drama sebelum tidur sebagai refreshing"]
+]
+
+def tambahan_kegiatan(kegiatan_harian, kegiatan_baru):
+    kegiatan_harian.append(kegiatan_baru)
+    print(" Kegiatan berhasil ditambahkan! ")
+    print(" --------------------------------------------------------- ")
+
+def hapus_kegiatan(kegiatan_harian):
+    for i in range(len(kegiatan_harian)):
+        jadwal = kegiatan_harian[i]
+        
+    hapus = int(input(" Nomor kegiatan yang akan dihapus : ")) - 1
+    if hapus < len(kegiatan_harian):
+            baru = kegiatan_harian[:hapus] + kegiatan_harian[hapus+1:]
+            kegiatan_harian.append(baru)
+            print(" Kegiatan telah dihapus!")
+            print(" --------------------------------------------------------- ")
+            return baru
+    else:
+        print(" Kegiatan Tidak Valid! ")
+
+while True:
+    print(" Pilihan Jadwal Harian Anda ")
+    print(" 1. Tampilan Jadwal Harian ")
+    print(" 2. Tambahkan Kegiatan ")
+    print(" 3. Hapus Kegiatan ")
+    print(" 4. Selesai ")
+
+    pilihan = input(" Masukkan Pilihan Anda : ")
+    if (pilihan == "1"):
+        jadwal_kegiatan(kegiatan_harian)
+        print(" --------------------------------------------------------- ")
+    elif (pilihan == "2"):
+        print(" --------------------------------------------------------- ")
+        kegiatan_baru = [ 
+        input(" Kegiatan tambahan      : "),
+        input(" Waktu kegiatan         : "),
+        input(" Waktu mulai kegiatan   : "),
+        input(" Waktu selesai kegiatan : "),
+        input(" Deskripsi kegiatan     : ")
+        ]
+        tambahan_kegiatan(kegiatan_harian, kegiatan_baru)
+        print(" --------------------------------------------------------- ")
+    elif (pilihan == "3"):
+        hapus_kegiatan(kegiatan_harian)
+        print(" --------------------------------------------------------- ")
+    elif (pilihan == "4"):
+        print(" Have A Great Day! ")
+        break
+    else:
+        print(" Pilihan Anda Tidak Valid! ")
+
