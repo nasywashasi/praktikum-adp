@@ -1,0 +1,54 @@
+def tambah(nama, usia, jk, goldar, riwayat, obat):
+    with open("data_pasien.txt", "a") as file:
+        file.write(f"{nama}, {usia}, {jk}, {goldar}, {riwayat}, {obat}\n ")
+    print(" Data berhasil disimpan! ")
+    print(" ------------------------------------ ")
+
+def hapus(nama2):
+    with open("data_pasien.txt", "r") as file:
+        line = file.readlines()
+    with open("data_pasien.txt", "w") as file:
+        for i in line:
+            if i.split(",")[0] != nama2:
+                file.write(i)
+    print(" Data berhasil dihapus! ")
+    print(" ------------------------------------ ")
+
+def tampilan():
+    with open("data_pasien.txt", "r") as file:
+        data = file.read()
+        print(data)
+        print(" ------------------------------------ ")
+
+while True:
+    print(" Data Pasien Rumah Sakit Kwangya ")
+    print(" ------------------------------------ ")
+    print(" 1. Menyimpan Data")
+    print(" 2. Menghapus Data")
+    print(" 3. Tampilkan Data")
+    print(" 4. Selesai ")
+    pilih = input(" Masukkan pilihan: ")
+
+    if pilih == "1":
+        nama = input(" Nama pasien             : ")
+        usia = input(" Usia pasien             : ")
+        jk = input(" Jenis kelamin pasien    : ")
+        goldar = input(" Golongan darah pasien   : ")
+        riwayat = input(" Riwayat penyakit pasien : ")
+        obat = input(" Daftar obat pasien      : ")
+        tambah(nama, usia, jk, goldar, riwayat, obat)
+
+    elif pilih == "2":
+        nama2 = input(" Nama pasien yang akan dihapus: ")
+        hapus(nama2)
+
+    elif pilih == "3":
+        tampilan()
+
+    elif pilih == "4":
+        print(" Terimakasih! ")
+        print(" ------------------------------------ ")
+        break
+
+    else:
+        print(" Tidak Valid!! ")
