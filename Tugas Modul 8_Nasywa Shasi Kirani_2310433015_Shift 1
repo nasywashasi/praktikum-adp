@@ -17,8 +17,10 @@ def hapus(nama2):
 def tampilan():
     with open("data_pasien.txt", "r") as file:
         data = file.read()
+    if data:
         print(data)
-        print(" ------------------------------------ ")
+    else :
+        print( "Data tidak ditemukan! ")
 
 while True:
     print(" Data Pasien Rumah Sakit Kwangya ")
@@ -43,6 +45,7 @@ while True:
         hapus(nama2)
 
     elif pilih == "3":
+        print(" Data pasien : ")
         tampilan()
 
     elif pilih == "4":
