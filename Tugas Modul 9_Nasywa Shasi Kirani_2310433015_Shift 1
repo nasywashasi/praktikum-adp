@@ -1,0 +1,48 @@
+# Soal Nomor 1
+import os
+from termcolor import colored, cprint
+
+os.system('cls')
+for i in range(5):
+    print(" "*40, end=" ")
+    print()
+for i in range(10):
+    print(" "*70, end=" ")
+    cprint(" "*70, "red", "on_light_red", end=" ")
+    print()
+for i in range(10):
+    print(" "*70, end=" ")
+    cprint(" "*70, "white", "on_white", end=" ")
+    print()
+for i in range(5):
+    print(" "*40, end=" ")
+    print()
+
+
+# Soal Nomor 2
+import os
+from termcolor import colored, cprint
+
+os.system('cls')
+for i in range(10):
+    print(" "*100, end=" ")
+
+print()
+cprint("        ____________________________ ", "red")
+cprint("       /                            \ ", "red")
+cprint("      /                              \ ", "red")   
+cprint("     /                                \ ", "red")
+cprint("    /                                  \ ", "red")
+cprint("   /                                    \ ", "red")
+cprint("  /______________________________________\ ", "red")
+cprint("  |            |       _______________   |", "cyan")
+cprint("  |     __     |      |_______|_______|  |", "cyan")
+cprint("  |    |  |    |      |_______|_______|  | ", "cyan")
+cprint("  |____|__|____|_________________________|", "cyan") 
+cprint(" ^^^^^/   / ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "green")
+cprint(" ^^^^/   /  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^", "green")
+cprint(" |-|     |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|", "yellow")
+print()
+
+for i in range(10):
+    print(" "*100, end=" ")
