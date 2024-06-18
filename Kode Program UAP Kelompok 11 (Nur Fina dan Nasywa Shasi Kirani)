@@ -82,7 +82,7 @@ def cek_member(nama_member):
         for member in file:
             if nama_member == member.split(",")[0].strip():
                 ketemu = True
-                break
+                pass
     return ketemu
 
 def tampil_data_member():
@@ -184,7 +184,7 @@ if masuk == '1':
          cprint(" Menu Tidak Valid!", "red")
          os.system('cls')
 elif masuk == '2':
-    sandi = input(" Masukkan sandi Anda : ")
+    sandi = input(" Masukkan sandi Anda (6 digit): ")
     if sandi == '010101':
         cprint(" Selamat Datang Owner!", "yellow")
     else:
