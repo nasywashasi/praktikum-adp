@@ -87,11 +87,26 @@ def cek_member(nama_member):
 
 def tampil_data_member():
     with open("data_member1.txt", "r") as file:
-        data1 = file.read()
-    if data1:
-        print(data1)
-    else :
-        print(" Data tidak ditemukan! ", "red")
+        baris1 = file.readlines()
+        if not baris1:
+            cprint(" Data tidak ditemukan!", "red")
+            return
+        print(" Berikut Data Member Toko Buku Media Utama: ")
+        print(" ================================================== ")
+        print(f" || {'Nama':<20} || {'Nomor HP':<20} || ")
+        print(" ================================================== ")
+        
+        for data1 in baris1:
+            data1 = data1.strip()
+            if data1:
+                data_split1 = data1.split(",")
+                if len(data_split1) == 2:
+                    nama_member, nomor_hp = data1.split(",")
+                    print(f" || {nama_member:<20} || {nomor_hp:<20} ||")
+                    print(" ================================================== ")
+                else:
+                    cprint(f" Baris tidak sesuai format: {data1}", "red")
+        print()
 
 judul_buku = {
      1 : "Komik Miiko seri 33", 
