@@ -21,11 +21,26 @@ def tambah_data(nama, judul_buku, jumlah, harga):
 
 def tampil_data():
     with open("data_buku.txt", "r") as file:
-        data = file.read()
-    if data:
-        print(data)
-    else :
-        print(" Data tidak ditemukan! ", "red")
+        baris = file.readlines()
+        if not baris:
+            cprint(" Data tidak ditemukan!", "red")
+            return
+        print(" Berikut Data Pembelian Toko Buku Media Utama: ")
+        print("====================================================================================================================== ")
+        print(f"|| {'Nama':<20} || {'Judul Buku':<50} || {'Jumlah':<15} || {'Harga':<15} ||")
+        print("====================================================================================================================== ")
+        
+        for data in baris:
+            data = data.strip()
+            if data:
+                data_split = data.split(",")
+                if len(data_split) == 4:
+                    nama, judul_buku, jumlah, harga = data.split(",")
+                    print(f"|| {nama:<20} || {judul_buku:<50} || {jumlah:<15} || {harga:<15} ||")
+                    print("====================================================================================================================== ")
+                else:
+                    cprint(f" Baris tidak sesuai format: {data}", "red")
+        print()
 
 def hapus_data(nama2):
     with open("data_buku.txt", "r") as file:
