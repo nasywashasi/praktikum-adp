@@ -26,9 +26,9 @@ def tampil_data():
             cprint(" Data tidak ditemukan!", "red")
             return
         print(" Berikut Data Pembelian Toko Buku Media Utama: ")
-        print("====================================================================================================================== ")
-        print(f"|| {'Nama':<20} || {'Judul Buku':<50} || {'Jumlah':<15} || {'Harga':<15} ||")
-        print("====================================================================================================================== ")
+        print(" ====================================================================================================================== ")
+        print(f" || {'Nama':<20} || {'Judul Buku':<50} || {'Jumlah':<15} || {'Harga':<15} ||")
+        print(" ====================================================================================================================== ")
         
         for data in baris:
             data = data.strip()
@@ -36,8 +36,8 @@ def tampil_data():
                 data_split = data.split(",")
                 if len(data_split) == 4:
                     nama, judul_buku, jumlah, harga = data.split(",")
-                    print(f"|| {nama:<20} || {judul_buku:<50} || {jumlah:<15} || {harga:<15} ||")
-                    print("====================================================================================================================== ")
+                    print(f" || {nama:<20} || {judul_buku:<50} || {jumlah:<15} || {harga:<15} ||")
+                    print(" ====================================================================================================================== ")
                 else:
                     cprint(f" Baris tidak sesuai format: {data}", "red")
         print()
@@ -93,10 +93,16 @@ def tampil_data_member():
     else :
         print(" Data tidak ditemukan! ", "red")
 
-judul_buku = ["Komik Miiko seri 33", "Hujan - Tere Liye", "Kalkukulus Jilid II - Purcell",
-         "Filosofi Teras", "Majalah Bobo Limited Edition", "Aljabar Linear Elementer - Howard Anton, Chris Rorres",
-         "Secret of Divine Love", "Kamus Bahasa Inggris"
-]
+judul_buku = {
+     1 : "Komik Miiko seri 33", 
+     2 : "Hujan - Tere Liye", 
+     3 : "Kalkukulus Jilid II - Purcell",
+     4 : "Filosofi Teras", 
+     5 : "Majalah Bobo Limited Edition", 
+     6 : "Aljabar Linear Elementer - Howard Anton, Chris Rorres",
+     7 : "Secret of Divine Love", 
+     8 : "Kamus Bahasa Inggris"
+}
 
 data_jualan = [
     [ 64, 71, 110, 213, 13, 58, 88, 34],
@@ -129,7 +135,7 @@ if masuk == '1':
             nomor_buku = int(input(" Masukkan nomor buku yang dipilih: "))
             
             if 1 <= nomor_buku <= len(judul_buku):
-                judul = judul_buku[nomor_buku - 1]
+                judul = judul_buku[nomor_buku]
                 harga = data_jualan[1][nomor_buku - 1]
                 stok = data_jualan[0][nomor_buku - 1]
             else:
