@@ -71,14 +71,14 @@ def buat_kartu():
     nama_member = input(" Masukkan nama Anda: ")
     nomor_hp = input(" Masukkan nomor HP Anda: ")
 
-    with open("data_member.txt", "a") as file:
+    with open("data_member1.txt", "a") as file:
         file.write(f" {nama_member}, {nomor_hp}\n")
     time.sleep(1)
     cprint(" Kartu member berhasil dibuat!", "blue")
 
 def cek_member(nama_member):
     ketemu = False
-    with open("data_member.txt", "r") as file:
+    with open("data_member1.txt", "r") as file:
         for member in file:
             if nama_member == member.split(",")[0].strip():
                 ketemu = True
@@ -86,7 +86,7 @@ def cek_member(nama_member):
     return ketemu
 
 def tampil_data_member():
-    with open("data_member.txt", "r") as file:
+    with open("data_member1.txt", "r") as file:
         data1 = file.read()
     if data1:
         print(data1)
