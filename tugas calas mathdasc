@@ -1,0 +1,60 @@
+def ukuran_panggung():
+
+    n = int(input("Berapa banyak intruksi/perintah yang digunakan dalam tarian? : "))
+    x=0
+    y=0
+    posisi_x = []
+    posisi_y = []
+
+    print("Inputan langkah intruksi berupa maju,mundur,kanan, atau kiri")
+    print()
+
+    for i in range (n):
+        while True:
+            intruksi = input("Masukkan instruksi gerakan (e.g maju 2): ").lower()
+            if len (intruksi.split())==2:
+                arah,langkah = intruksi.split()
+                if arah in ['maju','mundur','kanan','kiri']:
+                    langkah = int(langkah)
+                    if langkah < 0:
+                        print("Langkah harus berupa bilangan bulat positif!")
+                        continue
+                    break
+                else:
+                    print("Arah hanya berupa maju, mundur, kanan, atau kiri")
+            else:
+                print("Inputan intruksi harus berupa arah dan langkah (e.g maju 2)")
+
+        if arah == 'maju':
+            y += langkah
+        elif arah == "mundur":
+            y -= langkah
+        elif arah == "kanan":
+            x += langkah
+        elif arah == "kiri":
+            x -= langkah
+    
+        posisi_x.append(x)
+        posisi_y.append(y) 
+    
+    min_x = min(posisi_x)
+    maks_x = max(posisi_x)
+    min_y = min(posisi_y)
+    maks_y = max(posisi_y)
+
+    if min_y == maks_y:
+        min_y = 0
+    
+    if min_x == maks_x :
+        min_x = 0
+
+    panjang = maks_x-min_x
+    lebar = maks_y-min_y 
+
+    if panjang >= lebar:
+        return panjang, lebar
+    else:
+        return lebar, panjang
+    
+panjang, lebar = ukuran_panggung()
+print(f"Ukuran panggung minimal ialah panjang = {panjang}, lebar = {lebar}")
